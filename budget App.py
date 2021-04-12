@@ -99,7 +99,7 @@ class categories(Budget):
         '''THIS METHOD DEPOSITS INTO CATEGORIES'''
         try:
             depamount = int(
-                input("How much do you want to deposit from to %s:\n >>>>" % category))
+                input("How much do you want to deposit  to %s:\n >>>>" % category))
             categories.category_data[category] += depamount
             print("Deposit successful, Return to dashboard")
             categories.categories_landing()
@@ -121,7 +121,6 @@ class categories(Budget):
         except ValueError:
             print("Invalid Input,Please Try Again")
             categories.withdraw(category)
-
     def category_balance(category):
         '''THIS METHOD DISPLAYS CATEGORY BALANCES'''
         print("Your %s balance is %s" %(category, categories.category_data[category]))
@@ -149,7 +148,6 @@ class categories(Budget):
         except ValueError:
             print("Invalid Input")
             categories.balance_transfer(category)
-
 
 
 #App startup
